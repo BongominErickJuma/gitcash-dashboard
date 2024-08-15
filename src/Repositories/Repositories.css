@@ -1,0 +1,26 @@
+.flex-row-custom ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.flex-row-custom ul li {
+  margin-left: -15px; /* Adjust the overlap */
+}
+
+.flex-row-custom ul li:first-child {
+  margin-left: 0; /* Remove the margin for the first item */
+}
+
+.flex-row-custom ul li img {
+  width: 40px; /* Adjust the size of the images */
+  height: 40px;
+  border: 2px solid white; /* Optional: add a white border around each image */
+  object-fit: cover;
+  z-index: 1;
+}
+
+.flex-row-custom ul li img + img {
+  z-index: 0;
+}

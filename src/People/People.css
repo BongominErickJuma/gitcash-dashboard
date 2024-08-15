@@ -1,0 +1,35 @@
+.people img {
+  width: 100px;
+}
+.activity-graph {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.activity-bar {
+  width: 10px;
+  background-color: lightgray;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.activity-bar.high {
+  height: 40px;
+  background-color: var(--accent-color);
+}
+
+.activity-bar.medium {
+  height: 30px;
+  background-color: var(--accent-color);
+}
+
+.activity-bar.low {
+  height: 20px;
+  background-color: var(--accent-color);
+}
+
+.activity-bar.none {
+  height: 10px;
+  background-color: lightgray;
+}

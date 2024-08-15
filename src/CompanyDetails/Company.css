@@ -1,0 +1,50 @@
+.logo-company {
+  width: 200px;
+}
+
+.company ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.company li {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.company a,
+.company a:focus {
+  color: var(--nav-color);
+  padding: 10px 15px 0 0;
+  font-size: 16px;
+  font-family: var(--nav-font);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.company a i,
+.company a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+
+.company li:last-child a {
+  padding-right: 0;
+}
+
+.company li:hover > a,
+.company .active,
+.company .active:focus {
+  color: var(--nav-hover-color);
+}
