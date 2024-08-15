@@ -6,8 +6,8 @@ const Repositories = () => {
   return (
     <div className="repositories mt-5">
       <div className="flex-row-custom">
-        <h3>All Repositoies</h3>
-        <button className="btn">Add Repository</button>
+        <h3>All Projects</h3>
+        <button className="btn">Add Project Repository</button>
       </div>
 
       <div className="row">

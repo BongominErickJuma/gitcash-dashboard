@@ -26,18 +26,12 @@ const Header = () => {
           </div>
           <div className="mt-2 justify-self-end">
             <a href="#" className="twitter">
-              <i className="bi bi-twitter-x"></i>
-            </a>
-            <a href="#" className="facebook">
-              <i className="bi bi-facebook"></i>
-            </a>
-            <a href="#" className="instagram">
-              <i className="bi bi-instagram"></i>
+              <i className="bi bi-plus fs-4"></i>
             </a>
             <a href="#" className="linkedin">
-              <i className="bi bi-linkedin"></i>
+              <i className="bi bi-envelope fs-4"></i>
             </a>
-            <a href="#" className="linkedin">
+            <a href="#" className="account">
               <i className="bi bi-three-dots-vertical"></i>
             </a>
           </div>

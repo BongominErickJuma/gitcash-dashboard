@@ -6,7 +6,7 @@ const PopularRepositories = () => {
   return (
     <div className="repositories mt-5">
       <div className="flex-row-custom">
-        <h3>Popular Repositoies</h3>
+        <h3>Popular Project Repositoies</h3>
         <button className="btn">Add Repository</button>
       </div>
 
