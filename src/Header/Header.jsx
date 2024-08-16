@@ -3,6 +3,7 @@ import Logo from "../Assets/logo-white.png";
 import clientLogo from "../Assets/client-logo.gif";
 import "./Header.css";
 import Navbar from "../Navbar/Navbar";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -25,9 +26,9 @@ const Header = () => {
             <h1 className="sitename">Cognosphere Dynamics</h1>
           </div>
           <div className="mt-2 justify-self-end">
-            <a href="#" className="twitter">
-              <i className="bi bi-plus fs-4"></i>
-            </a>
+            <Link to="new_repository" className="new">
+              <i className="bi bi-plus fs-6"></i> New
+            </Link>
             <a href="#" className="linkedin">
               <i className="bi bi-envelope fs-4"></i>
             </a>

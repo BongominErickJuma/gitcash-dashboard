@@ -1,18 +1,21 @@
 import React from "react";
 import repoDetails from "./repoDetails";
 import "./Repositories.css";
+import { Link } from "react-router-dom";
 
 const PopularRepositories = () => {
   return (
     <div className="repositories mt-5">
       <div className="flex-row-custom">
         <h3>Popular Project Repositoies</h3>
-        <button className="btn">Add Repository</button>
+        <Link to="/new_repository" className="btn">
+          Add Project Repository
+        </Link>
       </div>
 
       <div className="row">
         {repoDetails.slice(0, 4).map((repo, inx) => (
-          <div className="col-lg-6 col-md-6" key={inx}>
+          <Link to="/view_repo" className="col-lg-6 col-md-6" key={inx}>
             <div className="card my-3">
               <div className="card-body">
                 <div className="flex-row-custom">
@@ -39,7 +42,7 @@ const PopularRepositories = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

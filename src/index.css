@@ -143,3 +143,23 @@ section,
   background-color: #f2f2f2;
   margin-left: 2em;
 }
+
+.link-info:active,
+.link-info:hover {
+  color: var(--accent-color) !important;
+  text-decoration: underline;
+}
+
+input:not([type="checkbox"]) {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--default-color);
+  background-color: transparent !important;
+  color: var(--accent-color);
+}
+
+label {
+  font-size: 1.25rem;
+  font-weight: 100 !important;
+}

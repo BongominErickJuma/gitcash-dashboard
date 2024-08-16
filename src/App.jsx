@@ -4,6 +4,10 @@ import Header from "./Header/Header";
 import Overview from "./Pages/Overview";
 import Contributors from "./Pages/Contributors";
 import AllRepositories from "./Pages/AllRepositories";
+import NewRepositories from "./Repositories/NewRepositories";
+import ImportRepository from "./Repositories/ImportRepository";
+import UploadRepository from "./Repositories/UploadRepository";
+import CodePreview from "./CodeDashboard/CodePreview";
 
 const App = () => {
   return (
@@ -17,6 +21,11 @@ const App = () => {
               <Route path="/" element={<Overview />} />
               <Route path="/people" element={<Contributors />} />
               <Route path="/repositories" element={<AllRepositories />} />
+              <Route path="/new_repository" element={<NewRepositories />} />
+              <Route path="/import_repository" element={<ImportRepository />} />
+              <Route path="/upload_repository" element={<UploadRepository />} />
+              <Route path="/view_repo" element={<CodePreview />} />
+              <Route path="*" element={<h1>Page not found</h1>} />
             </Routes>
           </div>
         </main>

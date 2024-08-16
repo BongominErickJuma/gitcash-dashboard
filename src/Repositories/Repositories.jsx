@@ -1,18 +1,21 @@
 import React from "react";
 import repoDetails from "./repoDetails";
 import "./Repositories.css";
+import { Link } from "react-router-dom";
 
 const Repositories = () => {
   return (
     <div className="repositories mt-5">
       <div className="flex-row-custom">
         <h3>All Projects</h3>
-        <button className="btn">Add Project Repository</button>
+        <Link to="/new_repository" className="btn">
+          Add Project Repository
+        </Link>
       </div>
 
       <div className="row">
         {repoDetails.map((repo, inx) => (
-          <div className="col-lg-6 col-md-6" key={inx}>
+          <Link to="/view_repo" className="col-lg-6 col-md-6" key={inx}>
             <div className="card my-3">
               <div className="card-body">
                 <div className="flex-row-custom">
@@ -39,7 +42,7 @@ const Repositories = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

@@ -8,7 +8,7 @@ const Company = () => {
       <div className="logo-company col-lg-3">
         <img src={Logo} alt="company logo" className="d-block w-100" />
       </div>
-      <div className="col-lg-10 d-flex flex-column justify-content-center">
+      <div className="col-lg-9 d-flex flex-column justify-content-center">
         <div className="company-name d-flex align-items-center justify-content-between ">
           <div className="left">
             <h3>Cognosphere Dynamics Ltd</h3>
