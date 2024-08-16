@@ -1,83 +1,175 @@
 import React from "react";
+import { fileNames, icons, commitMessages, updateTimes, links } from "./Readme";
+import profile from "../Assets/client-logo.gif";
 
 const CodeNav = () => {
+  // Define the arrays
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-      <a className="navbar-brand" href="#">
-        Dashboard
-      </a>
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon"></span>
-      </button>
-      <div className="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul className="navbar-nav ml-auto">
-          <li className="nav-item dropdown">
-            <a
-              className="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown 1
-            </a>
-            <div
-              className="dropdown-menu dropdown-menu-right"
-              aria-labelledby="navbarDropdown"
-            >
-              <a className="dropdown-item" href="#action1">
-                Action 1
-              </a>
-              <a className="dropdown-item" href="#action2">
-                Action 2
-              </a>
-              <div className="dropdown-divider"></div>
-              <a className="dropdown-item" href="#another-action">
-                Another Action
-              </a>
+    <div>
+      <div className="d-flex align-items-center">
+        <div className="d-flex align-items-center justify-content-between w-100">
+          <div className="d-flex align-items-center justify-content-between">
+            <button className="btn ms-0">R</button>
+            <h3 className="ms-2">react-mini-dashboards</h3>
+            <i className="bi bi-lock ms-2"></i>
+          </div>
+
+          <div>
+            <div className="flex-row-custom">
+              <div className="card d-flex align-items-center flex-row p-2 me-2">
+                <i className="bi bi-bell ms-2"></i>
+                <i className="bi bi-chevron-down ms-2"></i>
+              </div>
+              <div className="card d-flex align-items-center flex-row p-2 me-2">
+                <i className="bi bi-star me-2"></i>
+                star
+                <span className="ms-2">0</span>
+              </div>
+              <div className="card d-flex align-items-center flex-row p-2">
+                <i className="bi bi-git me-2"></i>
+                fork
+                <span className="ms-2">0</span>
+              </div>
             </div>
-          </li>
-          <li className="nav-item dropdown">
-            <a
-              className="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown2"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Dropdown 2
-            </a>
-            <div
-              className="dropdown-menu dropdown-menu-right"
-              aria-labelledby="navbarDropdown2"
-            >
-              <a className="dropdown-item" href="#action3">
-                Action 3
-              </a>
-              <a className="dropdown-item" href="#action4">
-                Action 4
-              </a>
-              <div className="dropdown-divider"></div>
-              <a className="dropdown-item" href="#another-action-2">
-                Another Action
-              </a>
-            </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
-    </nav>
+      <div className="row">
+        <div className="col-lg-9">
+          <div>
+            <div className="flex-row-custom mt-3">
+              <div className="flex-row-custom align-items-center">
+                <button className="btn ms-0">
+                  <div className="flex-row-custom align-items-center">
+                    <i className="bi bi-git me-2"></i>
+                    <i style={{ fontStyle: "normal" }}>main</i>
+                    <i className="bi bi-chevron-down ms-2"></i>
+                  </div>
+                </button>
+                <h6 className="ms-2">react-mini-dashboards /</h6>
+                <button className="btn ms-1">
+                  <div>
+                    <i className="bi bi-plus"></i>
+                    <i className="bi bi-chevron-down"></i>
+                  </div>
+                </button>
+              </div>
+              <div>
+                <div className="flex-row-custom">
+                  <button className="btn">History</button>
+                  <button className="btn">Find file</button>
+                  <button className="btn">
+                    <div>
+                      Edit
+                      <i className="bi bi-chevron-down ms-2"></i>
+                    </div>
+                  </button>
+                  <button className="btn">
+                    <div>
+                      Code
+                      <i className="bi bi-chevron-down ms-2"></i>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="card mt-3">
+            <div className="card-body ">
+              <div className="d-flex flex-row align-items-center justify-content-between">
+                <div className="d-flex flex-row align-items-start justify-content-between">
+                  <img
+                    src={profile}
+                    alt="profile"
+                    style={{
+                      width: "32px",
+                    }}
+                  />
+                  <div className="ms-2">
+                    <a href="#" className="text-dark link-info">
+                      Update file index.html
+                    </a>
+                    <p>
+                      <a href="#" className="text-dark link-info me-2">
+                        John Doe
+                      </a>
+                      authored 17 minutes ago
+                    </p>
+                  </div>
+                </div>
+                <div className="card d-flex align-items-center flex-row p-2">
+                  dh47482wkw2
+                  <i className="bi bi-clipboard2 ms-2"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <table className="table border mt-3">
+            <thead>
+              <tr className="table-secondary">
+                <th scope="col">Name</th>
+                <th scope="col">Last commit</th>
+                <th scope="col">Last update</th>
+              </tr>
+            </thead>
+            <tbody>
+              {fileNames.map((fileName, index) => (
+                <tr key={index}>
+                  <td>
+                    <a href={links[index]} className="text-dark link-info">
+                      <i className={icons[index] + " me-2"}></i>
+                      {fileName}
+                    </a>
+                  </td>
+                  <td>{commitMessages[index]}</td>
+                  <td>{updateTimes[index]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className=" col-lg-3 mt-3">
+          <div className="card">
+            <div className="card-body">
+              <h6 className="card-title">no description yet</h6>
+              <ul className="p-0 m-0">
+                <li>
+                  <a href="#" className="text-dark link-info">
+                    <i className="bi bi-book me-2"></i>
+                    Readme
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-dark link-info">
+                    <i className="bi bi-activity me-2"></i>
+                    Activity
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-dark link-info">
+                    <i className="bi bi-star me-2"></i>0 Stars
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-dark link-info">
+                    <i className="bi bi-eye me-2"></i>
+                    10 Watchers
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-dark link-info">
+                    <i className="bi bi-git me-2"></i>0 forks
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
