@@ -16,3 +16,56 @@ body {
   width: 100%;
   padding: 20px;
 }
+
+.code-container {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-height: 600px;
+  overflow: auto;
+}
+
+.code-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f6f8fa;
+  border-bottom: 1px solid #ddd;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 10;
+}
+
+.file-info {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  color: #24292e;
+}
+
+.file-info span {
+  cursor: pointer;
+}
+.file-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.file-actions button {
+  background: none;
+  border: none;
+  color: #0366d6;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.file-actions button:hover {
+  text-decoration: underline;
+}
+
+.editor-wrapper {
+  padding: 10px;
+  background-color: #f5f5f5;
+}

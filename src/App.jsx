@@ -8,6 +8,7 @@ import NewRepositories from "./Repositories/NewRepositories";
 import ImportRepository from "./Repositories/ImportRepository";
 import UploadRepository from "./Repositories/UploadRepository";
 import CodePreview from "./CodeDashboard/CodePreview";
+import CodeEditor from "./CodeDashboard/CodeEditor";
 
 const App = () => {
   return (
@@ -25,6 +26,8 @@ const App = () => {
               <Route path="/import_repository" element={<ImportRepository />} />
               <Route path="/upload_repository" element={<UploadRepository />} />
               <Route path="/view_repo" element={<CodePreview />} />
+              <Route path="/code-editor" element={<CodeEditor />} />
+
               <Route path="*" element={<h1>Page not found</h1>} />
             </Routes>
           </div>

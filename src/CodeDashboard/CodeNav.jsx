@@ -1,6 +1,8 @@
 import React from "react";
 import { fileNames, icons, commitMessages, updateTimes, links } from "./Readme";
 import profile from "../Assets/client-logo.gif";
+import Settings from "./Settings";
+import { Link } from "react-router-dom";
 
 const CodeNav = () => {
   // Define the arrays
@@ -107,29 +109,41 @@ const CodeNav = () => {
             </div>
           </div>
 
-          <table className="table border mt-3">
-            <thead>
-              <tr className="table-secondary">
-                <th scope="col">Name</th>
-                <th scope="col">Last commit</th>
-                <th scope="col">Last update</th>
-              </tr>
-            </thead>
-            <tbody>
-              {fileNames.map((fileName, index) => (
-                <tr key={index}>
-                  <td>
-                    <a href={links[index]} className="text-dark link-info">
-                      <i className={icons[index] + " me-2"}></i>
-                      {fileName}
-                    </a>
-                  </td>
-                  <td>{commitMessages[index]}</td>
-                  <td>{updateTimes[index]}</td>
+          <div
+            style={{
+              maxHeight: "100dvh",
+              overflowY: "auto",
+            }}
+            className="repo"
+          >
+            <table className="table border mt-3">
+              <thead>
+                <tr className="table-secondary">
+                  <th scope="col">Name</th>
+                  <th scope="col">Last commit</th>
+                  <th scope="col">Last update</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {fileNames.map((fileName, index) => (
+                  <tr key={index}>
+                    <td>
+                      <Link to="/code-editor" className="text-dark link-info">
+                        <i className={icons[index] + " me-2"}></i>
+                        {fileName}
+                      </Link>
+                    </td>
+                    <td>
+                      <Link to="/code-editor" className="text-dark link-info">
+                        {commitMessages[index]}
+                      </Link>
+                    </td>
+                    <td>{updateTimes[index]}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
         <div className=" col-lg-3 mt-3">
           <div className="card">
@@ -167,6 +181,7 @@ const CodeNav = () => {
               </ul>
             </div>
           </div>
+          <Settings />
         </div>
       </div>
     </div>

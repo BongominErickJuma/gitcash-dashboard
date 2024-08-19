@@ -26,15 +26,44 @@ const Header = () => {
             <h1 className="sitename">Cognosphere Dynamics</h1>
           </div>
           <div className="mt-2 justify-self-end">
-            <Link to="new_repository" className="new">
-              <i className="bi bi-plus fs-6"></i> New
-            </Link>
-            <a href="#" className="linkedin">
-              <i className="bi bi-envelope fs-4"></i>
-            </a>
-            <a href="#" className="account">
-              <i className="bi bi-three-dots-vertical"></i>
-            </a>
+            <ul className="d-flex align-items-end ">
+              <li className="me-3">
+                <Link to="new_repository" className="new p-0 m-0 ">
+                  <i className="bi bi-plus fs-6"></i> New
+                </Link>
+              </li>
+              <li className="me-3">
+                <a href="#" className="linkedin p-0 m-0 ">
+                  <i className="bi bi-envelope fs-6"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="account p-0 m-0"
+                  data-bs-toggle="dropdown"
+                >
+                  <i className="bi bi-three-dots-vertical"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item py-0" href="#">
+                      Action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item py-0" href="#">
+                      Another action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item py-0" href="#">
+                      Something else here
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
