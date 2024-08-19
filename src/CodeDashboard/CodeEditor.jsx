@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Editor from "react-simple-code-editor";
+import profile from "../Assets/client-logo.gif";
 import Prism from "prismjs";
 import "prismjs/themes/prism.css";
 import "prismjs/components/prism-jsx.min";
@@ -158,6 +159,8 @@ function calculateWinner(squares) {
 }`
   );
 
+  const [isEditable, setIsEditable] = useState(false);
+
   const highlightCode = (code) =>
     Prism.highlight(code, Prism.languages.jsx, "jsx");
 
@@ -178,8 +181,42 @@ function calculateWinner(squares) {
     element.click();
   };
 
+  const toggleEdit = () => {
+    setIsEditable(!isEditable);
+  };
+
   return (
     <div>
+      <div className="card my-3">
+        <div className="card-body ">
+          <div className="d-flex flex-row align-items-center justify-content-between">
+            <div className="d-flex flex-row align-items-start justify-content-between">
+              <img
+                src={profile}
+                alt="profile"
+                style={{
+                  width: "32px",
+                }}
+              />
+              <div className="ms-2">
+                <a href="#" className="text-dark link-info">
+                  Update file index.html
+                </a>
+                <p>
+                  <a href="#" className="text-dark link-info me-2">
+                    John Doe
+                  </a>
+                  authored 17 minutes ago
+                </p>
+              </div>
+            </div>
+            <div className="card d-flex align-items-center flex-row p-2">
+              dh47482wkw2
+              <i className="bi bi-clipboard2 ms-2"></i>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="code-container">
         <div className="code-header">
           <div className="file-info">
@@ -206,7 +243,7 @@ function calculateWinner(squares) {
             <button onClick={downloadFile}>
               <i className="bi bi-download"></i>
             </button>
-            <button>
+            <button onClick={toggleEdit}>
               <i className="bi bi-pen"></i>
             </button>
             <button>
@@ -220,6 +257,7 @@ function calculateWinner(squares) {
             onValueChange={(code) => setCode(code)}
             highlight={highlightCode}
             padding={10}
+            readOnly={!isEditable}
             style={{
               fontFamily: '"Fira code", "Fira Mono", monospace',
               fontSize: 16,
