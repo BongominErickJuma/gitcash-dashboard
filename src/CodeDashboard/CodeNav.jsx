@@ -79,7 +79,7 @@ const CodeNav = () => {
           </div>
 
           <div className="card mt-3">
-            <div className="card-body ">
+            <div className="card-body pt-1 pb-0">
               <div className="d-flex flex-row align-items-center justify-content-between">
                 <div className="d-flex flex-row align-items-start justify-content-between">
                   <img

@@ -187,8 +187,30 @@ function calculateWinner(squares) {
 
   return (
     <div>
+      <div>
+        <div className="flex-row-custom mt-3">
+          <div className="flex-row-custom align-items-center">
+            <button className="btn ms-0">
+              <div className="flex-row-custom align-items-center">
+                <i className="bi bi-git me-2"></i>
+                <i style={{ fontStyle: "normal" }}>main</i>
+                <i className="bi bi-chevron-down ms-2"></i>
+              </div>
+            </button>
+            <h6 className="ms-2">react-mini-dashboards / TikTakToe.jsx</h6>
+          </div>
+          <div>
+            <div className="flex-row-custom">
+              <button className="btn">Find file</button>
+              <button className="btn">Blame</button>
+              <button className="btn">History</button>
+              <button className="btn">Permalink</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="card my-3">
-        <div className="card-body ">
+        <div className="card-body pt-1 pb-0">
           <div className="d-flex flex-row align-items-center justify-content-between">
             <div className="d-flex flex-row align-items-start justify-content-between">
               <img
