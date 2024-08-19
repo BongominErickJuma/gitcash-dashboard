@@ -259,16 +259,49 @@ function calculateWinner(squares) {
             {lineCount} lines ({lineCount} loc) · {byteSize} Bytes
           </span>
           <div className="file-actions">
-            <button onClick={copyToClipboard}>
+            <button
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              data-bs-title="Tooltip on bottom"
+            >
+              <i className="bi bi-backspace"></i>
+            </button>
+            <button
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              data-bs-title="Tooltip on bottom"
+            >
+              <i className="bi bi-trash"></i>
+            </button>
+            <button
+              onClick={copyToClipboard}
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              data-bs-title="Tooltip on bottom"
+            >
               <i className="bi bi-copy"></i>
             </button>
-            <button onClick={downloadFile}>
+            <button
+              onClick={downloadFile}
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              data-bs-title="Tooltip on bottom"
+            >
               <i className="bi bi-download"></i>
             </button>
-            <button onClick={toggleEdit}>
+            <button
+              onClick={toggleEdit}
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              data-bs-title="Tooltip on bottom"
+            >
               <i className="bi bi-pen"></i>
             </button>
-            <button>
+            <button
+              data-bs-toggle="tooltip"
+              data-bs-placement="bottom"
+              data-bs-title="Tooltip on bottom"
+            >
               <i className="bi bi-code"></i>
             </button>
           </div>
